@@ -15,23 +15,46 @@
 //musica2.Disponivel = false;
 //Console.WriteLine(musica2.DescricaoResumida);
 
+
+
+//Banda queen = new Banda("Queen");
+
+//Album Queen = new Album("A night at the Opera");
+
+
+//Musica musica1 = new Musica(queen, "Love of my Life")
+//{
+//    Duracao = 213,
+//    Disponivel = true
+//};
+
+//Musica musica2 = new Musica(queen, "bohemian rhapsody")
+//{
+//    Duracao = 354,
+//    Disponivel = false
+//};
+
+//Queen.AddMusica(musica1);
+//Queen.AddMusica(musica2);
+
+//Queen.ExibirMusicasAlbum();
+
 //musica1.ExibirFichaTecnica();
 //musica2.ExibirFichaTecnica();
+//queen.AdicionarAlbum(Queen);
+//queen.ExibirDisocgrafia();
 
 
-Album Queen = new Album();
-Queen.Nome = "A night at the Opera";
+Episodio ep1 = new(1, "Piloto", 45);
+ep1.AddConvidado("Priscila");
+ep1.AddConvidado("Carlos");
 
 
-Musica musica1 = new Musica();
-musica1.Nome = "Love of my Life";
-musica1.Duracao = 213;
+Episodio ep2 = new(2, "Umbanda", 87);
+ep2.AddConvidado("Antonio");
+ep2.AddConvidado("Rosangela");
 
-Musica musica2 = new Musica();
-musica2.Nome =  "bohemian rhapsody";
-musica2.Duracao = 354;
-
-Queen.AddMusica(musica1);
-Queen.AddMusica(musica2);
-
-Queen.ExibirMusicasAlbum();
+Podcast podcast = new("um bom papo podcast", "Carlos");
+podcast.AddEpisodio(ep1);
+podcast.AddEpisodio(ep2);
+podcast.ExibeDetalhes();
